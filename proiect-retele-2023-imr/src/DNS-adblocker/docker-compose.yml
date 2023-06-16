@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  dns-blocker:
+    build: .
+    volumes:
+      - ./domains.txt:/app/domains.txt
+    ports:
+      - "53:53/udp"
